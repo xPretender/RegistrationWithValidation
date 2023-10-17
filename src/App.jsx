@@ -106,6 +106,13 @@ function App() {
       alert("User registered successfully!");
     }
     console.log(user);
+    setUser({
+      firstname: "",
+      lastname: "",
+      username: "",
+      email: "",
+      password: "",
+    });
   };
   
   //Blob Animation
