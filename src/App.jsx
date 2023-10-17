@@ -36,9 +36,10 @@ function App() {
     const firstname = users.find((u) => u.email === email).firstname;
     const lastname = users.find((u) => u.email === email).lastname;
     console.log(email,username,password);
+    console.log(users);
     const emailValidation = validateEmail(email);
     const passwordValidation = validatePassword(password);
-
+    console.log(email,password,username,firstname,lastname)
     if (!emailValidation.isValid) {
       setLoginErrorMessage(emailValidation.errorMessage);
       return;
@@ -106,7 +107,7 @@ function App() {
     if (isUserExists) {
       setSignupErrorMessage("User with this email already exists!");
     } else {
-      const newUser = { fullname, email, password };
+      const newUser = { firstname, lastname, username, email, password };
       setUsers([...users, newUser]);
       alert("User registered successfully!");
     }
