@@ -1,0 +1,18 @@
+A simple React Web App for Form Validation.
+
+Installation:
+1. Download the Zip File
+2. Extract the files
+3. cd RegistrationWithValidation
+4. npm install
+5. npm run dev
+
+Main Features:
+-Can handle multiple accounts as long as the page is not reloaded.(Used arrays to hold data instead of database)
+-Contains simple animations
+
+Form validation
+-Rejects all null fields
+-Only accepts valid email address
+-Only accepts password within 8-20 characters
+
