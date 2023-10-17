@@ -31,8 +31,10 @@ function App() {
   //Function for login
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    const { email, username, password, firstname, lastname } = user;
-    
+    const { email,password } = user;
+    const username = users.find((u) => u.email === email).username;
+    const firstname = users.find((u) => u.email === email).firstname;
+    const lastname = users.find((u) => u.email === email).lastname;
     console.log(email,username,password);
     const emailValidation = validateEmail(email);
     const passwordValidation = validatePassword(password);
@@ -58,7 +60,10 @@ function App() {
       setFullName(firstname + " " + lastname);
       setUserName(username);
       setEmail(email);
-
+      setUser({
+        email: "",
+        password: "",
+      });
     } else {
       alert("Login Failed: Invalid email or password");
     }
@@ -107,6 +112,9 @@ function App() {
     }
     console.log(user);
     setUser({
+      firstname: "",
+      lastname: "",
+      username: "",
       email: "",
       password: "",
     });
