@@ -107,9 +107,6 @@ function App() {
     }
     console.log(user);
     setUser({
-      firstname: "",
-      lastname: "",
-      username: "",
       email: "",
       password: "",
     });
